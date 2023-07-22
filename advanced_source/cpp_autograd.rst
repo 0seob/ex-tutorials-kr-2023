@@ -1,21 +1,21 @@
-Autograd in C++ Frontend
+C++ 프론트엔드에서의 Autograd 
 ========================
 
-The ``autograd`` package is crucial for building highly flexible and dynamic neural
-networks in PyTorch. Most of the autograd APIs in PyTorch Python frontend are also available
-in C++ frontend, allowing easy translation of autograd code from Python to C++.
+``Autograd`` 패키지는 유연하고 동적인 신경망을 구축하는데 중요합니다.
+PyTorch Python 프론트엔드의 Autograd API들 대부분은 C++ 프론트엔드에서도 사용할 수 있고,
+Python에서 C++로 쉽게 Autograd 코드를 변환할 수 있습니다.
 
-In this tutorial explore several examples of doing autograd in PyTorch C++ frontend.
-Note that this tutorial assumes that you already have a basic understanding of
-autograd in Python frontend. If that's not the case, please first read
-`Autograd: Automatic Differentiation <https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html>`_.
+이 튜토리얼에서는 PyTorch C++ 프론트엔드에서 Autograd를 사용하는 몇 가지 예를 살펴봅니다.
+튜토리얼은 사용자가 Python 프론트엔드에서의 Autograd에 대해 기본적으로 이해하고 있다고 가정합니다.
+만약 그렇지 않다면, 먼저 다음의 글을 읽어주세요.
+`Autograd: Automatic Differentiation <https://tutorials.pytorch.kr/beginner/blitz/autograd_tutorial.html>`_.
 
-Basic autograd operations
+기초 Autograd 연산
 -------------------------
 
-(Adapted from `this tutorial <https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#autograd-automatic-differentiation>`_)
+(`이 튜토리얼 <https://tutorials.pytorch.kr/beginner/blitz/autograd_tutorial.html>`_ 에서 채택되었습니다.)
 
-Create a tensor and set ``torch::requires_grad()`` to track computation with it
+텐서를 생성하고 계산을 추적하기위해 ``torch::requires_grad()`` 를 설정합니다.
 
 .. code-block:: cpp
 
